@@ -1,6 +1,7 @@
 {
   "name": "MindDrop",
   "short_name": "MindDrop",
+  "description": "MindDrop is the fastest way to get things out of your head. Speak or type a thought, and it’s automatically sorted into Shopping, Tasks, or Ideas with instant confirmation—so you can drop it now and deal with it later.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#111111",
