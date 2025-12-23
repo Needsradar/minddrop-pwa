@@ -3,37 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>MindDrop</title>
 
-  <!-- PWA manifest -->
+  <!-- PWA -->
   <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#ffffff" />
 
-  <!-- Icons (optional but nice) -->
-  <link rel="icon" sizes="192x192" href="/icons/icon-192.png" />
-  <link rel="icon" sizes="512x512" href="/icons/icon-512.png" />
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+  </style>
 
-  <!-- Theme colour for the browser bar -->
-  <meta name="theme-color" content="#1f2937" />
+  <!-- Instant Redirect -->
+  <script>
+    window.location.replace("https://mind-drop-4620dfb1.base44.app");
+  </script>
 </head>
 <body>
-  <h1>MindDrop</h1>
-  <p>Your PWA is running 🎉</p>
-
-  <script>
-    // Register the service worker when the page loads
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker
-          .register("/sw.js")
-          .then(reg => {
-            console.log("Service worker registered", reg.scope);
-          })
-          .catch(err => {
-            console.log("Service worker registration failed", err);
-          });
-      });
-    }
-  </script>
+  <h2>Loading MindDrop…</h2>
+  <p>Please wait.</p>
 </body>
 </html>
