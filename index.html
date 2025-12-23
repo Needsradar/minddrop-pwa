@@ -1,20 +1,39 @@
-{
-  "name": "MindDrop",
-  "short_name": "MindDrop",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#111111",
-  "theme_color": "#111111",
-  "icons": [
-    {
-      "src": "/icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MindDrop</title>
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Icons (optional but nice) -->
+  <link rel="icon" sizes="192x192" href="/icons/icon-192.png" />
+  <link rel="icon" sizes="512x512" href="/icons/icon-512.png" />
+
+  <!-- Theme colour for the browser bar -->
+  <meta name="theme-color" content="#1f2937" />
+</head>
+<body>
+  <h1>MindDrop</h1>
+  <p>Your PWA is running 🎉</p>
+
+  <script>
+    // Register the service worker when the page loads
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker
+          .register("/sw.js")
+          .then(reg => {
+            console.log("Service worker registered", reg.scope);
+          })
+          .catch(err => {
+            console.log("Service worker registration failed", err);
+          });
+      });
     }
-  ]
-}
+  </script>
+</body>
+</html>
