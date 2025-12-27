@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.vercel.minddrop_pwa_8b14.twa",
+        "sha256_cert_fingerprints": ["C6:51:79:8E:90:F9:C4:A8:1F:4B:28:DE:84:B3:DB:22:98:86:D6:3D:44:FF:57:18:32:49:DC:EA:83:9E:86:47"]
+      }
+    }]
